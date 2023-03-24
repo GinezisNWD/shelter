@@ -1,0 +1,57 @@
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+
+@import 'vendors/bootstrap';
+
+@import 'base/normalize';
+@import 'base/reset';
+@import 'base/typography';
+
+@import 'layout/navigation';
+@import 'layout/grid';
+@import 'layout/header';
+@import 'layout/footer';
+@import 'layout/sidebar';
+@import 'layout/forms';
+
+@import 'components/buttons';
+@import 'components/carousel';
+@import 'components/cover';
+@import 'components/dropdown';
+
+@import 'pages/home';
+
+@import 'themes/theme';
+@import 'themes/admin';
+
+html,
+body {
+	height: 100%;
+}
+
+.container {
+	max-width: 1200px;
+	margin: 0px auto;
+	height: 100%;
+}
+
+.wrapper {
+	min-height: 100%;
+	overflow: hidden;
+
+	display: flex;
+	flex-direction: column;
+}
+
+.header {
+	border: 5px solid red;
+}
+
+.main {
+	flex: 1 1 auto;
+	border: 5px solid green;
+}
+
+.footer {
+	border: 5px solid blue;
+}
