@@ -471,7 +471,7 @@ h6 {
   font-family: Arial, Helvetica, sans-serif;
   color: #CDCDCD;
 }
-.button_primary {
+.button-primary {
   display: block;
   width: 261px;
   font-size: 17px;
@@ -482,11 +482,48 @@ h6 {
   border-radius: 25px;
   border: none;
 }
-.button_primary:hover {
+.button-primary:hover {
   background: #FDDCC4;
 }
-.button_primary:active {
+.button-primary:active {
   background: #FFFFFF;
+}
+
+.button-card {
+  display: block;
+  width: 187px;
+  font-size: 17px;
+  line-height: 48px;
+  text-align: center;
+  color: #292929;
+  letter-spacing: 0.06em;
+  background: #FAFAFA;
+  border-radius: 25px;
+  border: 2px solid #F1CDB3;
+}
+.button-card:hover {
+  background: #FDDCC4;
+}
+.button-card:active {
+  background: #F1CDB3;
+}
+
+.button-arrow {
+  display: block;
+  width: 52px;
+  font-size: 15px;
+  line-height: 48px;
+  text-align: center;
+  color: #292929;
+  background: #F6F6F6;
+  border-radius: 100%;
+  border: 2px solid #F1CDB3;
+}
+.button-arrow:hover {
+  background: #FDDCC4;
+}
+.button-arrow:active {
+  background: #F1CDB3;
 }
 
 .not-only {
@@ -545,6 +582,68 @@ h6 {
 .about__text {
   margin: 25px 0 12.5px 0;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.our-friends {
+  padding: 80px 145px 100px 145px;
+  background-color: #F6F6F6;
+}
+.our-friends__slider-wrapper {
+  position: relative;
+  margin: 0 0 60px 0;
+}
+.our-friends__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.our-friends__title {
+  max-width: 400px;
+  margin: 0 0 58px 0;
+  font-size: 35px;
+  line-height: 130%;
+  text-align: center;
+  color: #545454;
+  letter-spacing: 0.06em;
+}
+.our-friends__slider {
+  display: flex;
+  justify-content: space-between;
+  gap: 90px;
+}
+.our-friends__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #FAFAFA;
+  border-radius: 9px;
+}
+.our-friends__image {
+  margin: 0 0 30px 0;
+}
+.our-friends__name {
+  font-size: 20px;
+  color: #545454;
+  letter-spacing: 0.06em;
+  margin: 0 0 30px 0;
+}
+.our-friends__button-card {
+  margin: 0 0 30px 0;
+}
+.our-friends__button-arrow-prev {
+  position: absolute;
+  left: -105px;
+  top: 44%;
+}
+.our-friends__button-arrow-next {
+  position: absolute;
+  right: -105px;
+  top: 44%;
+}
+.our-friends__button-primary {
+  letter-spacing: 0.06em;
 }
 
 html,

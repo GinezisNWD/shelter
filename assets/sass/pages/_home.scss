@@ -77,6 +77,90 @@
 }
 
 
+
+.our-friends {
+
+	padding: 80px 145px 100px 145px;
+	background-color: $color-light-l;
+
+	&__slider-wrapper {
+		position: relative;
+		margin: 0 0 60px 0;
+	}
+
+	&__wrapper {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__title {
+		max-width: 400px;
+		margin: 0 0 58px 0;
+
+		font-size: 35px;
+		line-height: 130%;
+		text-align: center;
+		color: $color-dark-l;
+		letter-spacing: 0.06em;
+	}
+
+	&__slider {
+		display: flex;
+		justify-content: space-between;
+
+		gap: 90px;
+
+
+	}
+
+	&__card {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+
+		background-color: $color-light-s;
+		border-radius: 9px;
+	}
+
+	&__image {
+		margin: 0 0 30px 0;
+	}
+
+	&__name {
+		font-size: 20px;
+		color: $color-dark-l;
+		letter-spacing: 0.06em;
+		margin: 0 0 30px 0;
+	}
+
+	&__button-card {
+		margin: 0 0 30px 0;
+	}
+
+	&__button-arrow-prev {
+		position: absolute;
+		left: 0 - 105px;
+		top: 44%;
+	}
+
+	&__button-arrow-next {
+		position: absolute;
+		right: 0 - 105px;
+		top: 44%;
+	}
+
+	&__button-primary {
+		letter-spacing: 0.06em;
+	}
+}
+
+
+
+
+
 // body {
 // 	font-family: Georgia, 'Times New Roman', Times, serif;
 // 	font-style: normal;

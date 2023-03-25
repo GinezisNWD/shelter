@@ -1,4 +1,4 @@
-.button_primary {
+.button-primary {
 	display: block;
 	width: 261px;
 
@@ -20,5 +20,56 @@
 
 	&:active {
 		background: $color-light-xl;
+	}
+}
+
+
+.button-card {
+	display: block;
+	width: 187px;
+
+	font-size: 17px;
+	line-height: 48px;
+
+
+
+	text-align: center;
+	color: $color-dark-3xl;
+	letter-spacing: 0.06em;
+
+	background: $color-light-s;
+	border-radius: 25px;
+	border: 2px solid $color-primary;
+
+	&:hover {
+		background: $color-primary-light;
+	}
+
+	&:active {
+		background: $color-primary;
+	}
+}
+
+.button-arrow {
+	display: block;
+	width: 52px;
+
+	font-size: 15px;
+	line-height: 48px;
+
+
+	text-align: center;
+	color: $color-dark-3xl;
+
+	background: $color-light-l;
+	border-radius: 100%;
+	border: 2px solid $color-primary;
+
+	&:hover {
+		background: $color-primary-light;
+	}
+
+	&:active {
+		background: $color-primary;
 	}
 }
