@@ -1,0 +1,24 @@
+.button_primary {
+	display: block;
+	width: 261px;
+
+	font-size: 17px;
+	line-height: 52px;
+
+
+
+	text-align: center;
+	color: $color-dark-3xl;
+
+	background: $color-primary;
+	border-radius: 25px;
+	border: none;
+
+	&:hover {
+		background: $color-primary-light;
+	}
+
+	&:active {
+		background: $color-light-xl;
+	}
+}
