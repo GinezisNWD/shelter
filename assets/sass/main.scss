@@ -29,10 +29,17 @@ body {
 	height: 100%;
 }
 
+body {
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	font-style: normal;
+	font-size: 15px;
+	line-height: 160%;
+	font-weight: 400;
+}
+
 .container {
 	max-width: 1200px;
 	margin: 0px auto;
-	height: 100%;
 }
 
 .wrapper {
@@ -43,9 +50,7 @@ body {
 	flex-direction: column;
 }
 
-.header {
-	border: 5px solid red;
-}
+.header {}
 
 .main {
 	flex: 1 1 auto;
