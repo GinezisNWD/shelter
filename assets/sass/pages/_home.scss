@@ -203,6 +203,75 @@
 	}
 }
 
+.in-addition {
+	padding: 80px 0 100px 0;
+	background: $color-light-l;
+
+	&__wrapper {
+		display: flex;
+		justify-content: center;
+		margin: 0px -30px;
+	}
+
+	&__image {
+		align-self: center;
+		width: 503px;
+		height: 261px;
+		padding: 0px 30px;
+		background-image: url(../assets/img/donation-dog.png);
+		background-repeat: no-repeat;
+	}
+
+	&__info {
+		max-width: 410px;
+		padding: 0px 30px;
+	}
+
+	&__title {
+		margin: 0 0 20px 0;
+
+		font-size: 35px;
+		line-height: 130%;
+		color: $color-dark-l;
+		letter-spacing: 0.06em;
+		text-align: start;
+	}
+
+	&__help {
+		margin: 0 0 20px 0;
+		line-height: 110%;
+		letter-spacing: 0.06em;
+	}
+
+	&__card {
+		display: flex;
+		max-width: 350px;
+
+		margin: 0 0 20px 0;
+		padding: 10px 15px;
+		gap: 15px;
+
+		background: $color-primary;
+		border-radius: 9px;
+	}
+
+	&__card-icon {}
+
+	&__card-number {
+		font-size: 20px;
+		line-height: 115%;
+		letter-spacing: 0.06em;
+	}
+
+	&__text {
+		font-family: Arial, Helvetica, sans-serif;
+		font-style: italic;
+		font-size: 12px;
+		line-height: 150%;
+		color: $color-dark-m;
+	}
+}
+
 
 
 

@@ -683,6 +683,62 @@ h6 {
   color: #545454;
 }
 
+.in-addition {
+  padding: 80px 0 100px 0;
+  background: #F6F6F6;
+}
+.in-addition__wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 0px -30px;
+}
+.in-addition__image {
+  align-self: center;
+  width: 503px;
+  height: 261px;
+  padding: 0px 30px;
+  background-image: url(../assets/img/donation-dog.png);
+  background-repeat: no-repeat;
+}
+.in-addition__info {
+  max-width: 410px;
+  padding: 0px 30px;
+}
+.in-addition__title {
+  margin: 0 0 20px 0;
+  font-size: 35px;
+  line-height: 130%;
+  color: #545454;
+  letter-spacing: 0.06em;
+  text-align: start;
+}
+.in-addition__help {
+  margin: 0 0 20px 0;
+  line-height: 110%;
+  letter-spacing: 0.06em;
+}
+.in-addition__card {
+  display: flex;
+  max-width: 350px;
+  margin: 0 0 20px 0;
+  padding: 10px 15px;
+  gap: 15px;
+  background: #F1CDB3;
+  border-radius: 9px;
+}
+.in-addition__card-number {
+  font-size: 20px;
+  line-height: 115%;
+  letter-spacing: 0.06em;
+}
+.in-addition__text {
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: italic;
+  font-size: 12px;
+  line-height: 150%;
+  color: #B2B2B2;
+}
+
 html,
 body {
   height: 100%;
