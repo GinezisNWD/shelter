@@ -1,0 +1,62 @@
+.footer {
+
+	background: url(noise_lines_transparent@2X.png), radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20;
+
+
+	.container {
+		padding: 56px 0 21px 0;
+		background: url(../assets/img/footer-puppy.png) right bottom no-repeat, ;
+	}
+
+	&__wrapper {
+		display: flex;
+		justify-content: flex-start;
+		gap: 160px;
+	}
+
+	&__for-questions {
+		flex: 0 1 23.3%;
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__title {
+		margin: 0 0 38px 0;
+
+		font-size: 35px;
+		line-height: 130%;
+		letter-spacing: 0.06em;
+		color: $color-light-xl;
+	}
+
+	&__our-addresses {
+		flex: 0 1 26%;
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__sub-title {
+		margin: 0 0 30px 0;
+
+		font-size: 35px;
+		line-height: 130%;
+		letter-spacing: 0.06em;
+		color: $color-light-xl;
+	}
+
+	&__link {
+		display: flex;
+		align-items: center;
+		margin: 0 0 37px 0;
+
+		font-size: 20px;
+		line-height: 115%;
+		letter-spacing: 0.06em;
+
+		color: $color-primary;
+	}
+
+	&__icon {
+		margin: 0 20px 0 0;
+	}
+}
