@@ -57,6 +57,18 @@
 	&__link {
 		font-family: Arial, Helvetica, sans-serif;
 		color: $color-dark-s;
+
+		&_active {}
+
+		&:hover {
+			color: $color-light-s;
+		}
+
+		&:active {
+			text-decoration: underline $color-primary;
+		}
+
+
 	}
 
 	&__icon {}

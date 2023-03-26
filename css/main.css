@@ -471,8 +471,15 @@ h6 {
   font-family: Arial, Helvetica, sans-serif;
   color: #CDCDCD;
 }
+.menu__link:hover {
+  color: #FAFAFA;
+}
+.menu__link:active {
+  -webkit-text-decoration: underline #F1CDB3;
+          text-decoration: underline #F1CDB3;
+}
 .footer {
-  background: url(../assets/img/footer-gradient-background.png);
+  background: url(../assets/img/footer-gradient-background.png) 50%/cover no-repeat;
 }
 .footer .container {
   padding: 56px 0 21px 0;
@@ -577,7 +584,7 @@ h6 {
 
 .not-only {
   padding: 164px 0 0 0;
-  background: url(../assets/img/start-screen-gradient-background.png);
+  background: url(../assets/img/start-screen-gradient-background.png) 50%/cover no-repeat;
 }
 .not-only__wrapper {
   display: flex;
