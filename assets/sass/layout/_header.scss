@@ -2,7 +2,7 @@
 	position: absolute;
 	width: 100%;
 
-	padding: 20px 0 0 0;
+	padding: 20px 0 30px 0;
 
 	&__wrapper {
 		display: flex;
@@ -52,24 +52,69 @@
 	&__list {
 		display: flex;
 		gap: 35px;
+
 	}
 
 	&__link {
+
+
 		font-family: Arial, Helvetica, sans-serif;
 		color: $color-dark-s;
-
-		&_active {}
 
 		&:hover {
 			color: $color-light-s;
 		}
+	}
 
-		&:active {
-			text-decoration: underline $color-primary;
-		}
+	&__link._active {
+		color: $color-light-s;
+		cursor: default;
 
 
+
+		text-decoration: underline;
+		text-decoration-color: $color-primary;
+		text-underline-offset: 7px;
+		text-decoration-thickness: 3px;
 	}
 
 	&__icon {}
+}
+
+
+
+
+
+
+
+
+.header {
+	&._light-bg {
+		background: $color-light-xl;
+	}
+
+	&__title._light-bg {
+		color: $color-dark-l;
+	}
+
+	&__subtitle._light-bg {
+		color: $color-dark-3xl;
+	}
+
+}
+
+.menu {
+	&__link._light-bg {
+		color: $color-dark-l;
+
+		&:hover {
+			color: $color-dark-3xl;
+		}
+	}
+
+	&__link._light-bg._active {
+		color: $color-dark-3xl;
+	}
+
+	&__icon._light-bg {}
 }

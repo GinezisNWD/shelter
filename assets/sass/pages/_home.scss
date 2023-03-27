@@ -45,7 +45,8 @@
 
 	&__wrapper {
 		display: flex;
-		justify-content: space-between;
+		justify-content: center;
+		gap: 120px;
 	}
 
 	&__image {

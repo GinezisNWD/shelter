@@ -42,6 +42,7 @@
 	border: 2px solid $color-primary;
 
 	&:hover {
+		border: 2px solid $color-primary-light;
 		background: $color-primary-light;
 	}
 
@@ -54,7 +55,7 @@
 	display: block;
 	width: 52px;
 
-	font-size: 15px;
+	font-size: 20px;
 	line-height: 48px;
 
 
@@ -67,9 +68,19 @@
 
 	&:hover {
 		background: $color-primary-light;
+		border: 2px solid $color-primary-light;
 	}
 
-	&:active {
+	&:active,
+	&._active {
 		background: $color-primary;
+		border: 2px solid $color-primary;
+		cursor: default;
 	}
+
+	&._inactive {
+		color: $color-dark-s;
+		border: 2px solid $color-dark-s;
+	}
+
 }

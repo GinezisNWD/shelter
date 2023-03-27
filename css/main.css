@@ -427,7 +427,7 @@ h6 {
 .header {
   position: absolute;
   width: 100%;
-  padding: 20px 0 0 0;
+  padding: 20px 0 30px 0;
 }
 .header__wrapper {
   display: flex;
@@ -474,9 +474,32 @@ h6 {
 .menu__link:hover {
   color: #FAFAFA;
 }
-.menu__link:active {
-  -webkit-text-decoration: underline #F1CDB3;
-          text-decoration: underline #F1CDB3;
+.menu__link._active {
+  color: #FAFAFA;
+  cursor: default;
+  text-decoration: underline;
+  text-decoration-color: #F1CDB3;
+  text-underline-offset: 7px;
+  text-decoration-thickness: 3px;
+}
+.header._light-bg {
+  background: #FFFFFF;
+}
+.header__title._light-bg {
+  color: #545454;
+}
+.header__subtitle._light-bg {
+  color: #292929;
+}
+
+.menu__link._light-bg {
+  color: #545454;
+}
+.menu__link._light-bg:hover {
+  color: #292929;
+}
+.menu__link._light-bg._active {
+  color: #292929;
 }
 .footer {
   background: url(../assets/img/footer-gradient-background.png) 50%/cover no-repeat;
@@ -558,6 +581,7 @@ h6 {
   border: 2px solid #F1CDB3;
 }
 .button-card:hover {
+  border: 2px solid #FDDCC4;
   background: #FDDCC4;
 }
 .button-card:active {
@@ -567,7 +591,7 @@ h6 {
 .button-arrow {
   display: block;
   width: 52px;
-  font-size: 15px;
+  font-size: 20px;
   line-height: 48px;
   text-align: center;
   color: #292929;
@@ -577,9 +601,16 @@ h6 {
 }
 .button-arrow:hover {
   background: #FDDCC4;
+  border: 2px solid #FDDCC4;
 }
-.button-arrow:active {
+.button-arrow:active, .button-arrow._active {
   background: #F1CDB3;
+  border: 2px solid #F1CDB3;
+  cursor: default;
+}
+.button-arrow._inactive {
+  color: #CDCDCD;
+  border: 2px solid #CDCDCD;
 }
 
 .not-only {
@@ -617,7 +648,8 @@ h6 {
 }
 .about__wrapper {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 120px;
 }
 .about__image {
   width: 300px;
