@@ -39,6 +39,15 @@
 
 		background-color: $color-light-s;
 		border-radius: 9px;
+
+		&:hover {
+			cursor: pointer;
+		}
+
+		&:hover .our-pets__button-card {
+			border: 2px solid $color-primary-light;
+			background: $color-primary-light;
+		}
 	}
 
 	&__image {

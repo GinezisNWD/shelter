@@ -546,6 +546,13 @@ h6 {
   letter-spacing: 0.06em;
   color: #F1CDB3;
 }
+.footer__link:hover {
+  color: #FDDCC4;
+  text-decoration: underline;
+  text-decoration-color: #FDDCC4;
+  text-underline-offset: 5px;
+  text-decoration-thickness: 2px;
+}
 .footer__icon {
   margin: 0 20px 0 0;
 }
@@ -609,8 +616,12 @@ h6 {
   cursor: default;
 }
 .button-arrow._inactive {
+  cursor: default;
   color: #CDCDCD;
   border: 2px solid #CDCDCD;
+}
+.button-arrow._inactive:hover {
+  background-color: #F6F6F6;
 }
 
 .not-only {
@@ -707,6 +718,13 @@ h6 {
   align-items: center;
   background-color: #FAFAFA;
   border-radius: 9px;
+}
+.our-friends__card:hover {
+  cursor: pointer;
+}
+.our-friends__card:hover .our-friends__button-card {
+  border: 2px solid #FDDCC4;
+  background: #FDDCC4;
 }
 .our-friends__image {
   margin: 0 0 30px 0;
@@ -818,6 +836,7 @@ h6 {
   font-size: 20px;
   line-height: 115%;
   letter-spacing: 0.06em;
+  color: #545454;
 }
 .in-addition__text {
   font-family: Arial, Helvetica, sans-serif;
@@ -859,6 +878,13 @@ h6 {
   background-color: #FAFAFA;
   border-radius: 9px;
 }
+.our-pets__card:hover {
+  cursor: pointer;
+}
+.our-pets__card:hover .our-pets__button-card {
+  border: 2px solid #FDDCC4;
+  background: #FDDCC4;
+}
 .our-pets__image {
   margin: 0 0 30px 0;
 }
@@ -879,6 +905,7 @@ h6 {
 html,
 body {
   height: 100%;
+  scroll-behavior: smooth;
 }
 
 body {

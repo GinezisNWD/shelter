@@ -54,6 +54,14 @@
 		letter-spacing: 0.06em;
 
 		color: $color-primary;
+
+		&:hover {
+			color: $color-primary-light;
+			text-decoration: underline;
+			text-decoration-color: $color-primary-light;
+			text-underline-offset: 5px;
+			text-decoration-thickness: 2px;
+		}
 	}
 
 	&__icon {

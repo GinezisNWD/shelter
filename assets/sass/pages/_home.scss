@@ -112,6 +112,7 @@
 		justify-content: space-between;
 
 		gap: 90px;
+
 	}
 
 	&__card {
@@ -122,6 +123,15 @@
 
 		background-color: $color-light-s;
 		border-radius: 9px;
+
+		&:hover {
+			cursor: pointer;
+		}
+
+		&:hover .our-friends__button-card {
+			border: 2px solid $color-primary-light;
+			background: $color-primary-light;
+		}
 	}
 
 	&__image {
@@ -260,6 +270,8 @@
 		font-size: 20px;
 		line-height: 115%;
 		letter-spacing: 0.06em;
+
+		color: $color-dark-l;
 	}
 
 	&__text {
