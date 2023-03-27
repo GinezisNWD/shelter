@@ -1,0 +1,74 @@
+.main {}
+
+.our-pets {
+	padding: 200px 0 100px 0;
+	background-color: $color-light-l;
+
+	&__wrapper {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__title {
+		margin: 0 0 60px 0;
+
+		font-size: 35px;
+		line-height: 130%;
+		color: $color-dark-l;
+		letter-spacing: 0.06em;
+		text-align: center;
+
+	}
+
+	&__pagination {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 0 60px 0;
+		gap: 30px 40px;
+
+
+	}
+
+	&__card {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+
+		background-color: $color-light-s;
+		border-radius: 9px;
+	}
+
+	&__image {
+		margin: 0 0 30px 0;
+	}
+
+	&__name {
+		font-size: 20px;
+		color: $color-dark-l;
+		letter-spacing: 0.06em;
+		margin: 0 0 30px 0;
+	}
+
+	&__button-card {
+		margin: 0 0 30px 0;
+	}
+
+	&__controls {
+		display: flex;
+		justify-content: center;
+		gap: 20px;
+	}
+
+	&__button-arrow-prev {}
+
+	&__button-arrow-some {}
+}
+
+
+
+.button-card {}
+
+.button-arrow {}

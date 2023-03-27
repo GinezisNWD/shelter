@@ -795,6 +795,55 @@ h6 {
   color: #B2B2B2;
 }
 
+.our-pets {
+  padding: 200px 0 100px 0;
+  background-color: #F6F6F6;
+}
+.our-pets__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.our-pets__title {
+  margin: 0 0 60px 0;
+  font-size: 35px;
+  line-height: 130%;
+  color: #545454;
+  letter-spacing: 0.06em;
+  text-align: center;
+}
+.our-pets__pagination {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 0 60px 0;
+  gap: 30px 40px;
+}
+.our-pets__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #FAFAFA;
+  border-radius: 9px;
+}
+.our-pets__image {
+  margin: 0 0 30px 0;
+}
+.our-pets__name {
+  font-size: 20px;
+  color: #545454;
+  letter-spacing: 0.06em;
+  margin: 0 0 30px 0;
+}
+.our-pets__button-card {
+  margin: 0 0 30px 0;
+}
+.our-pets__controls {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
 html,
 body {
   height: 100%;
