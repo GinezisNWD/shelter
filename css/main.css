@@ -662,7 +662,7 @@ h6 {
 }
 
 .about {
-  padding: 80px 215px 97px 215px;
+  padding: 80px 0 97px 0;
 }
 .about__wrapper {
   display: flex;
@@ -691,7 +691,7 @@ h6 {
 }
 
 .our-friends {
-  padding: 80px 145px 100px 145px;
+  padding: 80px 0 100px 0;
   background-color: #F6F6F6;
 }
 .our-friends__slider-wrapper {
