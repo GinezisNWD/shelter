@@ -121,21 +121,25 @@
 		justify-content: space-between;
 		align-items: center;
 
-		background-color: $color-light-s;
+		background: $color-light-s;
 		border-radius: 9px;
 
 		&:hover {
 			cursor: pointer;
+			box-shadow: 0px 0px 15px 15px $color-dark-s;
+			transition: all 0.3s
 		}
 
 		&:hover .our-friends__button-card {
 			border: 2px solid $color-primary-light;
 			background: $color-primary-light;
+			transition: all 0.3s
 		}
 	}
 
 	&__image {
 		margin: 0 0 30px 0;
+
 	}
 
 	&__name {

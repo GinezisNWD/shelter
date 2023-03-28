@@ -42,11 +42,14 @@
 
 		&:hover {
 			cursor: pointer;
+			box-shadow: 0px 0px 15px 15px $color-dark-s;
+			transition: all 0.3s
 		}
 
 		&:hover .our-pets__button-card {
 			border: 2px solid $color-primary-light;
 			background: $color-primary-light;
+			transition: all 0.3s
 		}
 	}
 

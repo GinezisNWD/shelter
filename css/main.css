@@ -473,6 +473,7 @@ h6 {
 }
 .menu__link:hover {
   color: #FAFAFA;
+  transition: all 0.3s;
 }
 .menu__link._active {
   color: #FAFAFA;
@@ -497,6 +498,7 @@ h6 {
 }
 .menu__link._light-bg:hover {
   color: #292929;
+  transition: all 0.3s;
 }
 .menu__link._light-bg._active {
   color: #292929;
@@ -552,6 +554,7 @@ h6 {
   text-decoration-color: #FDDCC4;
   text-underline-offset: 5px;
   text-decoration-thickness: 2px;
+  transition: all 0.3s;
 }
 .footer__icon {
   margin: 0 20px 0 0;
@@ -570,6 +573,7 @@ h6 {
 }
 .button-primary:hover {
   background: #FDDCC4;
+  transition: all 0.3s;
 }
 .button-primary:active {
   background: #FFFFFF;
@@ -590,6 +594,7 @@ h6 {
 .button-card:hover {
   border: 2px solid #FDDCC4;
   background: #FDDCC4;
+  transition: all 0.3s;
 }
 .button-card:active {
   background: #F1CDB3;
@@ -609,6 +614,7 @@ h6 {
 .button-arrow:hover {
   background: #FDDCC4;
   border: 2px solid #FDDCC4;
+  transition: all 0.3s;
 }
 .button-arrow:active, .button-arrow._active {
   background: #F1CDB3;
@@ -622,6 +628,7 @@ h6 {
 }
 .button-arrow._inactive:hover {
   background-color: #F6F6F6;
+  transition: all 0.3s;
 }
 
 .not-only {
@@ -716,15 +723,18 @@ h6 {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  background-color: #FAFAFA;
+  background: #FAFAFA;
   border-radius: 9px;
 }
 .our-friends__card:hover {
   cursor: pointer;
+  box-shadow: 0px 0px 15px 15px #CDCDCD;
+  transition: all 0.3s;
 }
 .our-friends__card:hover .our-friends__button-card {
   border: 2px solid #FDDCC4;
   background: #FDDCC4;
+  transition: all 0.3s;
 }
 .our-friends__image {
   margin: 0 0 30px 0;
@@ -880,10 +890,13 @@ h6 {
 }
 .our-pets__card:hover {
   cursor: pointer;
+  box-shadow: 0px 0px 15px 15px #CDCDCD;
+  transition: all 0.3s;
 }
 .our-pets__card:hover .our-pets__button-card {
   border: 2px solid #FDDCC4;
   background: #FDDCC4;
+  transition: all 0.3s;
 }
 .our-pets__image {
   margin: 0 0 30px 0;

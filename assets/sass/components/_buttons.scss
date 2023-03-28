@@ -16,6 +16,7 @@
 
 	&:hover {
 		background: $color-primary-light;
+		transition: all 0.3s
 	}
 
 	&:active {
@@ -44,6 +45,7 @@
 	&:hover {
 		border: 2px solid $color-primary-light;
 		background: $color-primary-light;
+		transition: all 0.3s
 	}
 
 	&:active {
@@ -69,6 +71,7 @@
 	&:hover {
 		background: $color-primary-light;
 		border: 2px solid $color-primary-light;
+		transition: all 0.3s
 	}
 
 	&:active,
@@ -85,6 +88,7 @@
 
 		&:hover {
 			background-color: $color-light-l;
+			transition: all 0.3s
 		}
 	}
 
