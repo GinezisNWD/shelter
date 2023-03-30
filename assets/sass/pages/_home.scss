@@ -15,7 +15,6 @@
 	}
 
 	&__title {
-		max-width: 310px;
 		margin: 0 0 42px 0;
 
 		font-size: 44px;
@@ -36,6 +35,27 @@
 
 		letter-spacing: 0.06em;
 	}
+
+	@media (max-width: 1240px) {
+		padding: 150px 0 0 0;
+
+		&__wrapper {
+			padding: 0 0 692px 0;
+			background-size: 80%;
+		}
+
+		&__title {
+			margin: 0 0 42px 124px;
+		}
+
+		&__text {
+			margin: 0 0 42px 124px;
+		}
+
+		&__button {
+			align-self: center;
+		}
+	}
 }
 
 
@@ -46,11 +66,12 @@
 	&__wrapper {
 		display: flex;
 		justify-content: center;
+		flex-wrap: wrap;
 		gap: 120px;
 	}
 
 	&__image {
-
+		order: 1;
 		width: 300px;
 		height: 408px;
 		background-image: url(../assets/img/about-pets.png);
@@ -58,6 +79,7 @@
 	}
 
 	&__info {
+		order: 2;
 		max-width: 430px;
 	}
 
@@ -75,6 +97,27 @@
 		margin: 25px 0 12.5px 0;
 		font-family: Arial, Helvetica, sans-serif;
 	}
+
+	@media (max-width: 1240px) {
+		padding: 80px 0 100px 0;
+
+		&__wrapper {
+			gap: 68px;
+		}
+
+		&__title {
+			margin-top: 0;
+		}
+
+		&__image {
+			order: 2;
+		}
+
+		&__info {
+			order: 1;
+		}
+	}
+
 }
 
 
@@ -86,7 +129,7 @@
 
 	&__slider-wrapper {
 		position: relative;
-		margin: 0 0 60px 0;
+		margin: 0 0 30px 0;
 	}
 
 	&__wrapper {
@@ -98,7 +141,7 @@
 
 	&__title {
 		max-width: 400px;
-		margin: 0 0 58px 0;
+		margin: 0 0 28px 0;
 
 		font-size: 35px;
 		line-height: 130%;
@@ -109,13 +152,19 @@
 
 	&__slider {
 		display: flex;
-		justify-content: space-between;
+		justify-content: start;
+
+		margin: -30x;
+		padding: 30px;
 
 		gap: 90px;
+
+		overflow: hidden;
 
 	}
 
 	&__card {
+		flex: 0 0 22.5%;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
@@ -155,18 +204,39 @@
 
 	&__button-arrow-prev {
 		position: absolute;
-		left: 0 - 105px;
-		top: 44%;
+		left: -75px;
+		top: 45%;
 	}
 
 	&__button-arrow-next {
 		position: absolute;
-		right: 0 - 105px;
-		top: 44%;
+		right: -75px;
+		top: 45%;
 	}
 
 	&__button-primary {
 		letter-spacing: 0.06em;
+	}
+
+	@media (max-width: 1240px) {
+		&__slider {
+			max-width: 640px;
+			gap: 40px;
+		}
+
+		&__card {
+			flex: 0 0 38%;
+		}
+
+		&__button-arrow-prev {
+			left: -33px;
+			top: 45%;
+		}
+
+		&__button-arrow-next {
+			right: -33px;
+			top: 45%;
+		}
 	}
 }
 
@@ -191,8 +261,7 @@
 	}
 
 	&__card {
-		flex-shrink: 0;
-		flex-grow: 0;
+		flex: 0 0 auto;
 
 		display: flex;
 		flex-direction: column;
@@ -214,6 +283,13 @@
 		letter-spacing: 0.06em;
 		color: $color-dark-l;
 	}
+
+	@media (max-width: 1240px) {
+		&__card {
+			flex: 0 1 33%;
+			margin: 0 0 55px 0;
+		}
+	}
 }
 
 .in-addition {
@@ -223,10 +299,12 @@
 	&__wrapper {
 		display: flex;
 		justify-content: center;
+		flex-wrap: wrap;
 		margin: 0px -30px;
 	}
 
 	&__image {
+		order: 1;
 		align-self: center;
 		width: 503px;
 		height: 261px;
@@ -236,6 +314,7 @@
 	}
 
 	&__info {
+		order: 2;
 		max-width: 410px;
 		padding: 0px 30px;
 	}
@@ -284,5 +363,18 @@
 		font-size: 12px;
 		line-height: 150%;
 		color: $color-dark-m;
+	}
+
+	@media (max-width: 1240px) {
+		&__image {
+			order: 2;
+		}
+
+		&__info {
+			order: 1;
+			margin: 0 0 60px 0;
+			padding: 0px 15px;
+
+		}
 	}
 }

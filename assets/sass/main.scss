@@ -42,6 +42,10 @@ body {
 .container {
 	max-width: 1200px;
 	margin: 0px auto;
+
+	@media (max-width: 1240px) {
+		max-width: 708px;
+	}
 }
 
 .wrapper {
