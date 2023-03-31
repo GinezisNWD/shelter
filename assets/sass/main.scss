@@ -46,6 +46,11 @@ body {
 	@media (max-width: 1240px) {
 		max-width: 708px;
 	}
+
+	@media (max-width: 748px) {
+		max-width: none;
+		padding: 0 10px;
+	}
 }
 
 .wrapper {
