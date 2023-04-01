@@ -10,11 +10,12 @@
 	&__wrapper {
 		display: flex;
 		justify-content: flex-start;
+		flex-wrap: wrap;
 		gap: 160px;
 	}
 
 	&__for-questions {
-		flex: 0 1 23.3%;
+		flex: 0 0 23.3%;
 		display: flex;
 		flex-direction: column;
 	}
@@ -29,7 +30,7 @@
 	}
 
 	&__our-addresses {
-		flex: 0 1 26%;
+		flex: 0 0 26%;
 		display: flex;
 		flex-direction: column;
 	}
@@ -68,4 +69,93 @@
 	&__icon {
 		margin: 0 20px 0 0;
 	}
+
+	@media (max-width: 1240px) {
+		&__wrapper {
+			display: flex;
+			justify-content: space-between;
+			padding: 0 32px;
+			gap: 58px;
+		}
+
+		&__for-questions {
+			flex: 1 0 30%;
+
+		}
+
+		&__our-addresses {
+			flex: 1 0 32%;
+			display: flex;
+			flex-direction: column;
+		}
+
+		.container {
+			padding: 30px 0 335px 0;
+			background-position: center bottom;
+		}
+	}
+
+	@media (max-width: 600px) {
+		&__wrapper {
+			gap: 8px;
+		}
+
+		&__for-questions {
+			flex: 1 1 100%;
+			align-items: center;
+		}
+
+		&__our-addresses {
+			flex: 1 1 100%;
+			align-items: start;
+		}
+
+		&__title {
+			padding: 0 110px;
+			text-align: center;
+		}
+
+		&__sub-title {
+			margin: 0 0 35px 0;
+			padding: 0 110px;
+			text-align: center;
+		}
+
+		&__link {
+			padding: 0 40px;
+		}
+	}
+
+	@media (max-width: 482px) {
+		&__wrapper {
+			padding: 0;
+		}
+
+		&__for-questions {}
+
+		&__our-addresses {}
+
+		&__title {
+			padding: 0;
+			font-size: 25px;
+		}
+
+		&__sub-title {
+			margin: 0 0 35px 0;
+			padding: 0 20px;
+			font-size: 25px;
+		}
+
+		&__link {
+			padding: 0 10px;
+		}
+
+		.container {
+			padding: 30px 0 275px 0;
+			background-size: 80%;
+			background-position: center bottom;
+		}
+	}
+
+
 }
