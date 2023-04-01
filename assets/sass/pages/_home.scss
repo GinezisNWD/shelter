@@ -56,6 +56,48 @@
 			align-self: center;
 		}
 	}
+
+	@media (max-width: 748px) {
+		&__title {
+			margin: 0 auto 42px auto;
+			text-align: center;
+			letter-spacing: 0.06em;
+
+		}
+
+		&__text {
+			max-width: 300px;
+			margin: 0 auto 42px auto;
+
+			text-align: center;
+		}
+	}
+
+	@media (max-width: 675px) {
+		&__wrapper {
+			padding: 0 0 575px 0;
+
+		}
+	}
+
+	@media (max-width: 575px) {
+		&__wrapper {
+			padding: 0 0 505px 0;
+
+		}
+	}
+
+	@media (max-width: 482px) {
+		&__wrapper {
+			padding: 0 0 375px 0;
+			background-size: 87%;
+		}
+
+		&__title {
+			font-size: 25px;
+		}
+	}
+
 }
 
 
@@ -115,6 +157,32 @@
 
 		&__info {
 			order: 1;
+		}
+	}
+
+	@media (max-width: 482px) {
+		padding: 40px 0 40px 0;
+
+		&__wrapper {
+			gap: 30px;
+		}
+
+		&__title {
+			margin: 0 auto 12.5px auto;
+			max-width: 270px;
+			font-size: 25px;
+			text-align: center;
+		}
+
+		&__text {
+			padding: 0 15px;
+			text-align: justify;
+		}
+
+		&__image {
+			width: 260px;
+			height: 353px;
+			background-size: cover;
 		}
 	}
 
@@ -238,6 +306,42 @@
 			top: 45%;
 		}
 	}
+
+	@media (max-width: 748px) {
+
+
+		&__slider-wrapper {
+			margin: 0 0 83px 0;
+		}
+
+		&__slider {
+			max-width: 330px;
+			gap: 40px;
+		}
+
+		&__card {
+			flex: 0 0 84%;
+		}
+
+		&__button-arrow-prev {
+			left: 75px;
+			top: 97%;
+		}
+
+		&__button-arrow-next {
+			right: 75px;
+			top: 97%;
+		}
+	}
+
+	@media (max-width: 482px) {
+		padding: 42px 0 42px 0;
+
+		&__title {
+			margin: 0 0 12px 0;
+			font-size: 25px;
+		}
+	}
 }
 
 
@@ -290,6 +394,34 @@
 			margin: 0 0 55px 0;
 		}
 	}
+
+	@media (max-width: 482px) {
+		padding: 42px 0 10px 0;
+
+		&__title {
+			margin: 0 0 42px 0;
+			font-size: 25px;
+		}
+
+		&__card {
+			flex: 0 1 50%;
+			margin: 0 0 30px 0;
+		}
+
+		&__image {
+
+			max-width: 50px;
+			margin: 0 0 20px 0;
+		}
+
+		&__sub-title {
+			font-size: 15px;
+		}
+
+		&__wrapper {
+			justify-content: start;
+		}
+	}
 }
 
 .in-addition {
@@ -332,11 +464,13 @@
 	&__help {
 		margin: 0 0 20px 0;
 		line-height: 110%;
+		color: $color-dark-l;
 		letter-spacing: 0.06em;
 	}
 
 	&__card {
 		display: flex;
+		align-items: center;
 		max-width: 350px;
 
 		margin: 0 0 20px 0;
@@ -375,6 +509,57 @@
 			margin: 0 0 60px 0;
 			padding: 0px 15px;
 
+		}
+
+		&__help {
+			text-align: start;
+		}
+	}
+
+	@media (max-width: 482px) {
+		padding: 42px 0 42px 0;
+
+		&__wrapper {
+			margin: 0;
+			padding: 0;
+		}
+
+		&__image {
+			width: 260px;
+			height: 135px;
+			background-size: cover;
+		}
+
+		&__info {
+			margin: 0 0 42px 0;
+			padding: 0;
+
+		}
+
+		&__title {
+			margin: 0 0 22px 0;
+			font-size: 25px;
+			text-align: center;
+		}
+
+		&__help {
+			margin: 0 0 22px 0;
+			text-align: center;
+			letter-spacing: 0em;
+		}
+
+		&__card {
+			max-width: 282px;
+			margin: 20px auto;
+		}
+
+		&__card-number {
+			font-size: 15px;
+		}
+
+		&__text {
+			padding: 0 10px;
+			text-align: justify;
 		}
 	}
 }

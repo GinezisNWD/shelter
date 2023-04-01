@@ -13,6 +13,10 @@
 		justify-content: space-between;
 	}
 
+	&._light-bg {
+		background: $color-light-xl;
+	}
+
 	&__logo {
 		display: flex;
 		flex-direction: column;
@@ -28,6 +32,10 @@
 		letter-spacing: 0.06em;
 	}
 
+	&__title._light-bg {
+		color: $color-dark-l;
+	}
+
 	&__subtitle {
 		font-family: Arial, Helvetica, sans-serif;
 		font-style: normal;
@@ -38,8 +46,16 @@
 		letter-spacing: 0.1em;
 	}
 
+	&__subtitle._light-bg {
+		color: $color-dark-3xl;
+	}
+
 	&__menu {
 		flex: 1 1 auto;
+	}
+
+	@media (max-width: 768px) {
+		padding: 20px 10px 30px 10px;
 	}
 }
 
@@ -70,6 +86,15 @@
 		}
 	}
 
+	&__link._light-bg {
+		color: $color-dark-l;
+
+		&:hover {
+			color: $color-dark-3xl;
+			transition: all 0.3s
+		}
+	}
+
 	&__link._active {
 		color: $color-light-s;
 		cursor: default;
@@ -82,15 +107,20 @@
 		text-decoration-thickness: 3px;
 	}
 
+	&__link._light-bg._active {
+		color: $color-dark-3xl;
+	}
+
 	&__icon {
 		display: none;
 	}
 
-	@media (max-width: 748px) {
+	@media (max-width: 768px) {
 
 		&__icon {
 			display: block;
 			position: relative;
+			top: 5px;
 			z-index: 5;
 			width: 30px;
 			height: 22px;
@@ -127,6 +157,15 @@
 			}
 		}
 
+		&__icon._light-bg {
+
+			>span,
+			&::before,
+			&::after {
+				background-color: #000000;
+			}
+		}
+
 		&__icon._active {
 			transform: rotate(90deg);
 		}
@@ -139,61 +178,29 @@
 			height: 100%;
 			max-width: 320px;
 			background-color: $color-dark-3xl;
-			padding: 100px 30px 30px 30px;
+			padding: 248px 0px 0px 0px;
 			transition: all 0.3s;
+		}
+
+		&__body._light-bg {
+			background-color: $color-light-xl;
 		}
 
 		&__body._active {
 			right: 0;
 		}
 
+
+
 		&__list {
 			flex-direction: column;
-			align-items: end;
+			align-items: center;
 		}
 
+		&__link {}
+
 	}
 }
-
-
-
-
-
-
-
-
-.header {
-	&._light-bg {
-		background: $color-light-xl;
-	}
-
-	&__title._light-bg {
-		color: $color-dark-l;
-	}
-
-	&__subtitle._light-bg {
-		color: $color-dark-3xl;
-	}
-
-}
-
-.menu {
-	&__link._light-bg {
-		color: $color-dark-l;
-
-		&:hover {
-			color: $color-dark-3xl;
-			transition: all 0.3s
-		}
-	}
-
-	&__link._light-bg._active {
-		color: $color-dark-3xl;
-	}
-
-	&__icon._light-bg {}
-}
-
 
 ._scroll-lock {
 	overflow: hidden;

@@ -106,6 +106,20 @@
 
 	}
 
+	@media (max-width: 440px) {
+		padding: 162px 0 42px 0;
+
+		&__title {
+			margin: 0 0 40px 0;
+			font-size: 25px;
+		}
+
+		&__controls {
+			margin: 44px 0 0 0;
+			gap: 10px;
+		}
+	}
+
 }
 
 
