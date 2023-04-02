@@ -716,7 +716,7 @@ h6 {
     background-position: center bottom;
   }
 }
-@media (max-width: 400) {
+@media (max-width: 400px) {
   .footer .container {
     padding: 30px 0 275px 0;
     background-position: center bottom;
