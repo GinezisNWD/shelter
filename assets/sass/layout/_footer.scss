@@ -95,7 +95,7 @@
 		}
 	}
 
-	@media (max-width: 600px) {
+	@media (max-width: 715px) {
 		&__wrapper {
 			gap: 8px;
 		}
@@ -118,6 +118,25 @@
 		&__sub-title {
 			margin: 0 0 35px 0;
 			padding: 0 110px;
+			text-align: center;
+		}
+
+		&__link {
+			padding: 0 10px;
+		}
+
+	}
+
+	@media (max-width: 580px) {
+
+		&__title {
+			padding: 0 80px;
+			text-align: center;
+		}
+
+		&__sub-title {
+			margin: 0 0 35px 0;
+			padding: 0 80px;
 			text-align: center;
 		}
 
@@ -151,8 +170,15 @@
 		}
 
 		.container {
-			padding: 30px 0 275px 0;
+			padding: 30px 0 355px 0;
 			background-size: 80%;
+			background-position: center bottom;
+		}
+	}
+
+	@media (max-width: 400) {
+		.container {
+			padding: 30px 0 275px 0;
 			background-position: center bottom;
 		}
 	}
