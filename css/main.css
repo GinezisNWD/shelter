@@ -655,7 +655,7 @@ h6 {
     background-position: center bottom;
   }
 }
-@media (max-width: 600px) {
+@media (max-width: 715px) {
   .footer__wrapper {
     gap: 8px;
   }
@@ -674,6 +674,20 @@ h6 {
   .footer__sub-title {
     margin: 0 0 35px 0;
     padding: 0 110px;
+    text-align: center;
+  }
+  .footer__link {
+    padding: 0 10px;
+  }
+}
+@media (max-width: 580px) {
+  .footer__title {
+    padding: 0 80px;
+    text-align: center;
+  }
+  .footer__sub-title {
+    margin: 0 0 35px 0;
+    padding: 0 80px;
     text-align: center;
   }
   .footer__link {
@@ -697,8 +711,14 @@ h6 {
     padding: 0 10px;
   }
   .footer .container {
-    padding: 30px 0 275px 0;
+    padding: 30px 0 355px 0;
     background-size: 80%;
+    background-position: center bottom;
+  }
+}
+@media (max-width: 400) {
+  .footer .container {
+    padding: 30px 0 275px 0;
     background-position: center bottom;
   }
 }
@@ -844,11 +864,17 @@ h6 {
 }
 @media (max-width: 482px) {
   .not-only__wrapper {
-    padding: 0 0 375px 0;
+    padding: 0 0 425px 0;
     background-size: 87%;
   }
   .not-only__title {
     font-size: 25px;
+  }
+}
+@media (max-width: 400px) {
+  .not-only__wrapper {
+    padding: 0 0 375px 0;
+    background-size: 87%;
   }
 }
 
