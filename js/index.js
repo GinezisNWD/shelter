@@ -8,3 +8,9 @@ if (menuIcon) {
 		menuBody.classList.toggle('_active');
 	});
 }
+
+// scroll on click
+const menuLinks = document.querySelectorAll('.menu__link[data-goto]')
+if (menuLinks > 0) {
+	menuLinks.forEach
+}

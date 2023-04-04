@@ -469,7 +469,7 @@ h6 {
 .header__menu {
   flex: 1 1 auto;
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .header {
     padding: 20px 10px 30px 10px;
   }
@@ -513,7 +513,7 @@ h6 {
 .menu__icon {
   display: none;
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .menu__icon {
     display: block;
     position: relative;
