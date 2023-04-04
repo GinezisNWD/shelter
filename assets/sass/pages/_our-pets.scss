@@ -1,0 +1,129 @@
+.main {}
+
+.our-pets {
+	padding: 200px 0 100px 0;
+	background-color: $color-light-l;
+
+	&__wrapper {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__title {
+		margin: 0 0 60px 0;
+
+		font-size: 35px;
+		line-height: 130%;
+		color: $color-dark-l;
+		letter-spacing: 0.06em;
+		text-align: center;
+
+	}
+
+	&__pagination {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: start;
+		justify-content: center;
+
+		overflow: hidden;
+		margin: -30px;
+		padding: 30px;
+		gap: 28px 40px;
+
+
+	}
+
+	&__card {
+		flex: 0 1 22.5%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+
+		background-color: $color-light-s;
+		border-radius: 9px;
+
+		&:hover {
+			cursor: pointer;
+			box-shadow: 0px 0px 15px 15px $color-dark-s;
+			transition: all 0.3s
+		}
+
+		&:hover .our-pets__button-card {
+			border: 2px solid $color-primary-light;
+			background: $color-primary-light;
+			transition: all 0.3s
+		}
+	}
+
+	&__image {
+		margin: 0 0 30px 0;
+	}
+
+	&__name {
+		font-size: 20px;
+		color: $color-dark-l;
+		letter-spacing: 0.06em;
+		margin: 0 0 30px 0;
+	}
+
+	&__button-card {
+		margin: 0 0 30px 0;
+	}
+
+	&__controls {
+		display: flex;
+		justify-content: center;
+		margin: 57px 0 0 0;
+		gap: 20px;
+	}
+
+	&__button-arrow-prev {}
+
+	&__button-arrow-some {}
+
+	@media (max-width: 1240px) {
+		padding: 200px 0 78px 0;
+
+		&__title {
+			margin: 0 0 30px 0;
+		}
+
+		&__pagination {
+			max-height: 1422px;
+		}
+
+		&__card {
+			flex: 0 1 34.5%;
+		}
+
+		&__controls {
+			margin: 42px 0 0 0;
+		}
+
+	}
+
+	@media (max-width: 440px) {
+		padding: 162px 0 42px 0;
+
+		&__title {
+			margin: 0 0 40px 0;
+			font-size: 25px;
+		}
+
+		&__controls {
+			margin: 44px 0 0 0;
+			gap: 10px;
+		}
+	}
+
+}
+
+
+
+.button-card {}
+
+.button-arrow {}

@@ -1,0 +1,95 @@
+.button-primary {
+	display: block;
+	width: 261px;
+
+	font-size: 17px;
+	line-height: 52px;
+
+
+
+	text-align: center;
+	color: $color-dark-3xl;
+
+	background: $color-primary;
+	border-radius: 25px;
+	border: none;
+
+	&:hover {
+		background: $color-primary-light;
+		transition: all 0.3s
+	}
+
+	&:active {
+		background: $color-light-xl;
+	}
+}
+
+
+.button-card {
+	display: block;
+	width: 187px;
+
+	font-size: 17px;
+	line-height: 48px;
+
+
+
+	text-align: center;
+	color: $color-dark-3xl;
+	letter-spacing: 0.06em;
+
+	background: $color-light-s;
+	border-radius: 25px;
+	border: 2px solid $color-primary;
+
+	&:hover {
+		border: 2px solid $color-primary-light;
+		background: $color-primary-light;
+		transition: all 0.3s
+	}
+
+	&:active {
+		background: $color-primary;
+	}
+}
+
+.button-arrow {
+	display: block;
+	width: 52px;
+
+	font-size: 20px;
+	line-height: 48px;
+
+
+	text-align: center;
+	color: $color-dark-3xl;
+
+	background: $color-light-l;
+	border-radius: 100%;
+	border: 2px solid $color-primary;
+
+	&:hover {
+		background: $color-primary-light;
+		border: 2px solid $color-primary-light;
+		transition: all 0.3s
+	}
+
+	&:active,
+	&._active {
+		background: $color-primary;
+		border: 2px solid $color-primary;
+		cursor: default;
+	}
+
+	&._inactive {
+		cursor: default;
+		color: $color-dark-s;
+		border: 2px solid $color-dark-s;
+
+		&:hover {
+			background-color: $color-light-l;
+			transition: all 0.3s
+		}
+	}
+
+}
