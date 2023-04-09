@@ -1,3 +1,5 @@
+console.log('Время анимации слайдера для каждого разрешения разное, кнопка не активна пока идет анимация')
+
 // burger menu
 const menuIcon = document.querySelector('.menu__icon');
 const menuBody = document.querySelector('.menu__body');
@@ -10,7 +12,7 @@ if (menuIcon) {
 }
 
 // scroll on click
-const menuLinks = document.querySelectorAll('.menu__link[data-goto]')
+const menuLinks = document.querySelectorAll('.menu__link[data-goto], .button-primary[data-goto]')
 
 if (menuLinks.length > 0) {
 	menuLinks.forEach(menuLink => {

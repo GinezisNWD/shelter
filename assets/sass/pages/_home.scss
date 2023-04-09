@@ -247,11 +247,11 @@
 		left: 0;
 
 		&_next-cards {
-			animation: next-cards 0.7s ease-in-out forwards;
+			animation: next-cards 0.6s ease-in-out forwards;
 		}
 
 		&_prev-cards {
-			animation: prev-cards 0.7s ease-in-out forwards;
+			animation: prev-cards 0.6s ease-in-out forwards;
 		}
 	}
 
@@ -316,6 +316,16 @@
 			gap: 40px;
 		}
 
+		&__card-wrapper {
+			&_next-cards {
+				animation-duration: 0.45s;
+			}
+
+			&_prev-cards {
+				animation-duration: 0.45s;
+			}
+		}
+
 		&__card {
 			flex: 0 0 38%;
 		}
@@ -341,6 +351,16 @@
 		&__slider {
 			max-width: 330px;
 			gap: 40px;
+		}
+
+		&__card-wrapper {
+			&_next-cards {
+				animation-duration: 0.3s;
+			}
+
+			&_prev-cards {
+				animation-duration: 0.3s;
+			}
 		}
 
 		&__card {

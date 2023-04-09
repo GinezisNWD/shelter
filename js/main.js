@@ -17,7 +17,6 @@ function getRandom() {
 	return Math.floor(Math.random() * cards.length)
 }
 
-
 function getCardsBlock(n) {
 	let cardsBlock = ''
 
@@ -47,32 +46,29 @@ function getCardsBlock(n) {
 	return cardsBlock
 }
 
-function getPrevCardBlock() {
+function getPrevCardBlock(array) {
 	let cardsBlock = ''
-	for (let i = 0; i < prevRenderedCards.length; i++) {
+
+	for (let i = 0; i < array.length; i++) {
+		const random = array[i]
+
+		renderedCards.push(random)
 		const cardWrapper = document.createElement('div')
 		cardWrapper.classList.add('our-friends__card-wrapper')
 		cardWrapper.innerHTML = `<div class="our-friends__card">
 		<div class="our-friends__image">
-			<img src="${cards[prevRenderedCards[i]].img}" alt="${cards[prevRenderedCards[i]].name}">
+			<img src="${cards[random].img}" alt="${cards[random].name}">
 		</div>
-		<div class="our-friends__name">${cards[prevRenderedCards[i]].name}</div>
+		<div class="our-friends__name">${cards[random].name}</div>
 		<button class="our-friends__button-card button-card">Learn more</button>
 		</div>`
 
-		cards[prevRenderedCards[i]].isRender = true
+		cards[random].isRender = true
 
 		cardsBlock = cardsBlock + cardWrapper.outerHTML
-
-
-
 	}
-
 	return cardsBlock
 }
-
-// prevRenderedCards[i]
-
 
 function getNumberOfCards() {
 	const num = window.innerWidth
@@ -96,7 +92,6 @@ function clearRenderedStack() {
 	}
 }
 
-
 function firstRender() {
 	const num = window.innerWidth
 
@@ -106,56 +101,72 @@ function firstRender() {
 }
 firstRender()
 
-// window.addEventListener('resize', function () {
-// 	let num = this.innerWidth
-// 	if (num > 0 && num < 749) { ourFriendsSLider.innerHTML = ''; renderCardsBlock(getCardsBlock(getNumberOfCards())); }
-// 	if (num >= 749 && num <= 1239) { ourFriendsSLider.innerHTML = ''; renderCardsBlock(getCardsBlock(getNumberOfCards())); }
-// 	if (num >= 1240) { ourFriendsSLider.innerHTML = ''; (renderCardsBlock(getCardsBlock(getNumberOfCards()))); }
-// });
-// 
-function nextCardsBlock() {
+window.addEventListener('resize', resize);
+let prevSize = getNumberOfCards()
+function resize() {
+	let num = this.innerWidth
+	let size
+	if (num > 0 && num < 749) { size = 1 }
+	if (num >= 749 && num <= 1239) { size = 2 }
+	if (num >= 1240) { size = 3 }
+
+	if (size !== prevSize) {
+		prevSize = size
+		clearRenderedStack()
+		prevRenderedCards = new Array()
+		if (num > 0 && num < 749) { ourFriendsSLider.innerHTML = ''; renderCardsBlock(getCardsBlock(getNumberOfCards())); }
+		if (num >= 749 && num <= 1239) { ourFriendsSLider.innerHTML = ''; renderCardsBlock(getCardsBlock(getNumberOfCards())); }
+		if (num >= 1240) { ourFriendsSLider.innerHTML = ''; (renderCardsBlock(getCardsBlock(getNumberOfCards()))); }
+	}
+}
+
+
+function nextCardsBlock(e) {
+	e.target.removeEventListener('click', nextCardsBlock)
+
 	const direction = 'next'
+	const prevBlock = ourFriendsSLider.innerHTML
+	let newBlock
 
-	if (prevDirection !== 'some' && prevDirection !== direction) {
-		console.log(`нам нужен предыдущий блок ${prevRenderedCards}`)
-
-
-	} else { console.log('всё хорошо') }
-
+	if (prevDirection !== 'some' && prevDirection !== direction && prevRenderedCards.length > 0) {
+		newBlock = `${getPrevCardBlock(prevRenderedCards)}`
+		renderCardsBlock(newBlock)
+	} else {
+		newBlock = `${getCardsBlock(getNumberOfCards())}`
+		renderCardsBlock(newBlock)
+	}
 	prevDirection = direction
 
-
-	const prevBlock = ourFriendsSLider.innerHTML
-	const newBlock = `${getCardsBlock(getNumberOfCards())}`
-	renderCardsBlock(newBlock)
-	const cards = document.querySelectorAll('.our-friends__card-wrapper')
-	cards.forEach(elem => { elem.classList.add('our-friends__card-wrapper_next-cards') })
-	cards[0].addEventListener('animationend', function () {
-		console.log('Анимация кончилась')
+	const cardsNodeList = document.querySelectorAll('.our-friends__card-wrapper')
+	cardsNodeList.forEach(elem => { elem.classList.add('our-friends__card-wrapper_next-cards') })
+	cardsNodeList[0].addEventListener('animationend', function () {
 		ourFriendsSLider.innerHTML = newBlock
+		ourFriendButtonArrowNext.addEventListener('click', nextCardsBlock)
 	})
 	clearRenderedStack()
 }
 
-function prevCardsBlock() {
+function prevCardsBlock(e) {
+	e.target.removeEventListener('click', prevCardsBlock)
+
 	const direction = 'prev'
-	if (prevDirection !== 'some' && prevDirection !== direction) {
-		console.log(`нам нужен предыдущий блок ${prevRenderedCards}`)
+	const prevBlock = ourFriendsSLider.innerHTML
+	let newBlock
 
-	} else { console.log('всё хорошо') }
-
+	if (prevDirection !== 'some' && prevDirection !== direction && prevRenderedCards.length > 0) {
+		newBlock = `${getPrevCardBlock(prevRenderedCards)}`
+		renderCardsBlock(newBlock, 'afterbegin')
+	} else {
+		newBlock = `${getCardsBlock(getNumberOfCards())}`
+		renderCardsBlock(newBlock, 'afterbegin')
+	}
 	prevDirection = direction
 
-
-
-	const prevBlock = ourFriendsSLider.innerHTML
-	const newBlock = `${getCardsBlock(getNumberOfCards())}`
-	renderCardsBlock(newBlock, 'afterbegin')
-	const cards = document.querySelectorAll('.our-friends__card-wrapper')
-	cards.forEach(elem => { elem.classList.add('our-friends__card-wrapper_prev-cards') })
-	cards[0].addEventListener('animationend', function () {
-		console.log('Анимация кончилась')
+	const cardsNodeList = document.querySelectorAll('.our-friends__card-wrapper')
+	cardsNodeList.forEach(elem => { elem.classList.add('our-friends__card-wrapper_prev-cards') })
+	cardsNodeList[0].addEventListener('animationend', function () {
 		ourFriendsSLider.innerHTML = newBlock
+		ourFriendButtonArrowPrev.addEventListener('click', prevCardsBlock)
 	})
 	clearRenderedStack()
 }
@@ -164,35 +175,3 @@ ourFriendButtonArrowNext.addEventListener('click', nextCardsBlock)
 
 ourFriendButtonArrowPrev.addEventListener('click', prevCardsBlock)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// const testArr = [0, 1, 2, 3, 4, 5, 6, 7,]
-// const test = cards[Math.floor(Math.random() * testArr.length)]
-// const newArr = []
-// const random = Math.floor(Math.random() * cards.length)
-
-// console.log(cards[random])
-
-
-{/* <div class="our-friends__card-wrapper">
-<div class="our-friends__card">
-	<div class="our-friends__image">
-		<img src="assets/img/pets-katrine.jpg" alt="katrine">
-	</div>
-	<div class="our-friends__name">Katrine</div>
-	<button class="our-friends__button-card button-card">Learn more</button>
-</div>
-</div> */}
