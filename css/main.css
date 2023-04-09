@@ -990,10 +990,10 @@ h6 {
   left: 0;
 }
 .our-friends__card-wrapper_next-cards {
-  animation: next-cards 0.7s ease-in-out forwards;
+  animation: next-cards 0.6s ease-in-out forwards;
 }
 .our-friends__card-wrapper_prev-cards {
-  animation: prev-cards 0.7s ease-in-out forwards;
+  animation: prev-cards 0.6s ease-in-out forwards;
 }
 .our-friends__card {
   flex: 0 0 22.5%;
@@ -1043,6 +1043,12 @@ h6 {
     max-width: 640px;
     gap: 40px;
   }
+  .our-friends__card-wrapper_next-cards {
+    animation-duration: 0.45s;
+  }
+  .our-friends__card-wrapper_prev-cards {
+    animation-duration: 0.45s;
+  }
   .our-friends__card {
     flex: 0 0 38%;
   }
@@ -1062,6 +1068,12 @@ h6 {
   .our-friends__slider {
     max-width: 330px;
     gap: 40px;
+  }
+  .our-friends__card-wrapper_next-cards {
+    animation-duration: 0.3s;
+  }
+  .our-friends__card-wrapper_prev-cards {
+    animation-duration: 0.3s;
   }
   .our-friends__card {
     flex: 0 0 84%;
