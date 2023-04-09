@@ -11,10 +11,8 @@ if (menuIcon) {
 
 // scroll on click
 const menuLinks = document.querySelectorAll('.menu__link[data-goto]')
-console.log(menuLinks)
 
 if (menuLinks.length > 0) {
-	console.log('Начинаем работу')
 	menuLinks.forEach(menuLink => {
 		menuLink.addEventListener('click', onMenuLinkClick)
 	})
@@ -26,7 +24,6 @@ if (menuLinks.length > 0) {
 			const gotoBlockValue = gotoBlock.getBoundingClientRect().top + pageYOffset
 
 			if (menuIcon.classList.contains('_active')) {
-				console.log('НАда закрыть')
 				document.body.classList.remove('_scroll-lock')
 				menuIcon.classList.remove('_active');
 				menuBody.classList.remove('_active');
@@ -42,3 +39,5 @@ if (menuLinks.length > 0) {
 		}
 	}
 }
+
+// 
