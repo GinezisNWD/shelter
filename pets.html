@@ -26,14 +26,16 @@
 					</a>
 
 					<div class="header__menu menu">
-						<nav class="menu__body _light-bg">
-							<ul class="menu__list">
-								<li><a class="menu__link _light-bg" href="index.html">About the shelter</a></li>
-								<li><a class="menu__link _light-bg _active" href="#">Our pets</a></li>
-								<li><a class="menu__link _light-bg" href="index.html#help">Help the shelter</a></li>
-								<li><a data-goto=".footer" class="menu__link _light-bg" href="#">Contacts </a></li>
-							</ul>
-						</nav>
+						<div class="menu__body-wrapper">
+							<nav class="menu__body _light-bg">
+								<ul class="menu__list">
+									<li><a id="home" class="menu__link _light-bg" href="#">About the shelter</a></li>
+									<li><a data-goto="pets.html" class="menu__link _light-bg _active" href="#">Our pets</a></li>
+									<li><a class="menu__link _light-bg" href="#" id="help">Help the shelter</a></li>
+									<li><a data-goto=".footer" class="menu__link _light-bg" href="#">Contacts </a></li>
+								</ul>
+							</nav>
+						</div>
 						<div class="menu__icon _light-bg">
 							<span></span>
 						</div>
@@ -151,6 +153,7 @@
 		</footer>
 	</div>
 	<script src="js/index.js"></script>
+	<script src="js/burger-menu.js"></script>
 </body>
 
 </html>
