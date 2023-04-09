@@ -822,7 +822,7 @@ h6 {
   width: 207px;
   letter-spacing: 0.06em;
 }
-@media (max-width: 1240px) {
+@media (max-width: 1239px) {
   .not-only {
     padding: 150px 0 0 0;
   }
@@ -909,7 +909,7 @@ h6 {
   margin: 25px 0 12.5px 0;
   font-family: Arial, Helvetica, sans-serif;
 }
-@media (max-width: 1240px) {
+@media (max-width: 1239px) {
   .about {
     padding: 80px 0 100px 0;
   }
@@ -976,10 +976,24 @@ h6 {
 .our-friends__slider {
   display: flex;
   justify-content: start;
+  min-width: 330px;
+  min-height: 496px;
+  max-width: 1050px;
   margin: -30x;
   padding: 30px;
   gap: 90px;
   overflow: hidden;
+}
+.our-friends__card-wrapper {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+.our-friends__card-wrapper_next-cards {
+  animation: next-cards 0.7s ease-in-out forwards;
+}
+.our-friends__card-wrapper_prev-cards {
+  animation: prev-cards 0.7s ease-in-out forwards;
 }
 .our-friends__card {
   flex: 0 0 22.5%;
@@ -993,7 +1007,6 @@ h6 {
 .our-friends__card:hover {
   cursor: pointer;
   box-shadow: 0px 0px 15px 15px #CDCDCD;
-  transition: all 0.3s;
 }
 .our-friends__card:hover .our-friends__button-card {
   border: 2px solid #FDDCC4;
@@ -1025,7 +1038,7 @@ h6 {
 .our-friends__button-primary {
   letter-spacing: 0.06em;
 }
-@media (max-width: 1240px) {
+@media (max-width: 1239px) {
   .our-friends__slider {
     max-width: 640px;
     gap: 40px;
@@ -1072,6 +1085,58 @@ h6 {
   }
 }
 
+@keyframes next-cards {
+  from {
+    left: 0;
+  }
+  to {
+    left: -1080px;
+  }
+}
+@keyframes prev-cards {
+  from {
+    left: -1080px;
+  }
+  to {
+    left: 0;
+  }
+}
+@media (max-width: 1239px) {
+  @keyframes next-cards {
+    from {
+      left: 0;
+    }
+    to {
+      left: -620px;
+    }
+  }
+  @keyframes prev-cards {
+    from {
+      left: -620px;
+    }
+    to {
+      left: 0;
+    }
+  }
+}
+@media (max-width: 748px) {
+  @keyframes next-cards {
+    from {
+      left: 0;
+    }
+    to {
+      left: -310px;
+    }
+  }
+  @keyframes prev-cards {
+    from {
+      left: -310px;
+    }
+    to {
+      left: 0;
+    }
+  }
+}
 .help {
   padding: 80px 0 45px 0;
 }
@@ -1107,7 +1172,7 @@ h6 {
   letter-spacing: 0.06em;
   color: #545454;
 }
-@media (max-width: 1240px) {
+@media (max-width: 1239px) {
   .help__card {
     flex: 0 1 33%;
     margin: 0 0 55px 0;
@@ -1198,7 +1263,7 @@ h6 {
   line-height: 150%;
   color: #B2B2B2;
 }
-@media (max-width: 1240px) {
+@media (max-width: 1239px) {
   .in-addition__image {
     order: 2;
   }
