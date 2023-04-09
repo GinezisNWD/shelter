@@ -68,11 +68,15 @@
 	border-radius: 100%;
 	border: 2px solid $color-primary;
 
-	&:hover {
-		background: $color-primary-light;
-		border: 2px solid $color-primary-light;
-		transition: all 0.3s
+	@media (hover: hover) and (pointer: fine) {
+		&:hover {
+			background: $color-primary-light;
+			border: 2px solid $color-primary-light;
+			transition: all 0.3s
+		}
 	}
+
+
 
 	&:active,
 	&._active {
