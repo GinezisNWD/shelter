@@ -77,7 +77,7 @@ if (homeLink) {
 if (ourPetsLink) {
 	ourPetsLink.addEventListener('click', function (e) {
 		e.preventDefault()
-		setTimeout(function () { window.location.href = 'pets.html' }, 150)
+		setTimeout(function () { window.location.href = './pets.html' }, 150)
 		document.body.classList.remove('_scroll-lock')
 		menuIcon.classList.remove('_active');
 		menuBody.classList.remove('_active');
@@ -90,7 +90,7 @@ if (ourPetsLink) {
 if (helpLink) {
 	helpLink.addEventListener('click', function (e) {
 		e.preventDefault()
-		setTimeout(function () { window.location.href = 'index.html#help' }, 250)
+		setTimeout(function () { window.location.href = './index.html#help' }, 250)
 		document.body.classList.remove('_scroll-lock')
 		menuIcon.classList.remove('_active');
 		menuBody.classList.remove('_active');
@@ -99,4 +99,3 @@ if (helpLink) {
 	})
 }
 
-// 

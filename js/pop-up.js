@@ -24,8 +24,6 @@ if (ourFriendsSLider) {
 
 }
 
-
-
 if (petsPagination) {
 	petsPagination.addEventListener('click', function (e) {
 		let targetItem = e.target;
@@ -46,8 +44,6 @@ if (petsPagination) {
 		}
 	})
 }
-
-
 
 // window.scrollTo({
 // 	top: 1300,
