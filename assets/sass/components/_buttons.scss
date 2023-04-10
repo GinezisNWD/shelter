@@ -97,3 +97,38 @@
 	}
 
 }
+
+
+
+.button-close {
+	position: absolute;
+
+	width: 52px;
+	height: 52px;
+
+	font-size: 20px;
+	line-height: 48px;
+
+
+	text-align: center;
+	color: $color-dark-3xl;
+
+	background: rgba(41, 41, 41, 0.2);
+	border-radius: 100%;
+	border: 3px solid $color-primary;
+
+	&>img {
+		position: relative;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+
+
+	@media (hover: hover) and (pointer: fine) {
+		&:hover {
+			background: $color-primary-light;
+			border: 2px solid $color-primary-light;
+			transition: all 0.3s
+		}
+	}
+}

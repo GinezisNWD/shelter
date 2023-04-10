@@ -594,7 +594,6 @@ h6 {
 
 ._scroll-lock {
   overflow: hidden;
-  background: rgba(41, 41, 41, 0.6);
 }
 
 .footer {
@@ -815,6 +814,31 @@ h6 {
   transition: all 0.3s;
 }
 
+.button-close {
+  position: absolute;
+  width: 52px;
+  height: 52px;
+  font-size: 20px;
+  line-height: 48px;
+  text-align: center;
+  color: #292929;
+  background: rgba(41, 41, 41, 0.2);
+  border-radius: 100%;
+  border: 3px solid #F1CDB3;
+}
+.button-close > img {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+@media (hover: hover) and (pointer: fine) {
+  .button-close:hover {
+    background: #FDDCC4;
+    border: 2px solid #FDDCC4;
+    transition: all 0.3s;
+  }
+}
+
 .not-only {
   padding: 164px 0 0 0;
   background: url(../assets/img/noise_transparent@2x.png), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%);
@@ -1016,6 +1040,104 @@ h6 {
 .our-friends__card-wrapper_prev-cards {
   animation: prev-cards 0.6s ease-in-out forwards;
 }
+.our-friends__card-wrapper._active {
+  position: fixed;
+  top: 0;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(41, 41, 41, 0.6);
+  transition: all 0.8s;
+}
+.our-friends__card-wrapper._active .our-friends__card {
+  position: relative;
+  flex: 0 1 auto;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 900px;
+  height: 500px;
+}
+.our-friends__card-wrapper._active .our-friends__card:hover {
+  cursor: pointer;
+  box-shadow: none;
+}
+.our-friends__card-wrapper._active .our-friends__card:hover .our-friends__button-card {
+  border: none;
+  background: none;
+  transition: none;
+}
+.our-friends__card-wrapper._active .our-friends__button-close {
+  display: block;
+  position: absolute;
+  top: -52px;
+  right: -44px;
+}
+.our-friends__card-wrapper._active .our-friends__image {
+  display: flex;
+  width: 500px;
+  height: 500px;
+  margin: 0;
+}
+.our-friends__card-wrapper._active .our-friends__info {
+  height: 100%;
+  justify-content: start;
+  padding: 50px 20px 90px 27px;
+  letter-spacing: 0.06em;
+}
+.our-friends__card-wrapper._active .our-friends__name {
+  margin: 0 0 10px 0;
+  text-align: start;
+  font-size: 35px;
+  line-height: 130%;
+}
+.our-friends__card-wrapper._active .our-friends__subtitle {
+  display: block;
+  margin: 0 0 42px 0;
+  font-size: 20px;
+  line-height: 115%;
+}
+.our-friends__card-wrapper._active .our-friends__description {
+  display: block;
+  line-height: 115%;
+  letter-spacing: 0.06em;
+  margin: 0 0 35px 0;
+}
+.our-friends__card-wrapper._active .our-friends__list {
+  display: block;
+  margin: 0 0 0 16px;
+}
+.our-friends__card-wrapper._active .our-friends__li {
+  display: flex;
+  position: relative;
+  align-items: center;
+  margin: 0 0 3px 0;
+  text-align: start;
+}
+.our-friends__card-wrapper._active .our-friends__li > h5 {
+  margin: 0 5px 0 0;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 110%;
+}
+.our-friends__card-wrapper._active .our-friends__li::before {
+  content: "";
+  position: absolute;
+  top: 40%;
+  left: -10px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: #F1CDB3;
+}
+.our-friends__card-wrapper._active .our-friends__button-card {
+  display: none;
+}
 .our-friends__card {
   flex: 0 0 22.5%;
   display: flex;
@@ -1034,14 +1156,39 @@ h6 {
   background: #FDDCC4;
   transition: all 0.3s;
 }
+.our-friends__button-close {
+  display: none;
+}
 .our-friends__image {
+  border-radius: 9px;
   margin: 0 0 30px 0;
+}
+.our-friends__image > img {
+  border-radius: 9px;
+}
+.our-friends__info {
+  display: flex;
+  flex-direction: column;
+  color: #000000;
 }
 .our-friends__name {
   font-size: 20px;
   color: #545454;
   letter-spacing: 0.06em;
   margin: 0 0 30px 0;
+  text-align: center;
+}
+.our-friends__subtitle {
+  display: none;
+}
+.our-friends__description {
+  display: none;
+}
+.our-friends__list {
+  display: none;
+}
+.our-friends__li {
+  display: none;
 }
 .our-friends__button-card {
   margin: 0 0 30px 0;

@@ -32,12 +32,33 @@ function getCardsBlock(n) {
 		const cardWrapper = document.createElement('div')
 		cardWrapper.classList.add('our-friends__card-wrapper')
 		cardWrapper.innerHTML = `<div class="our-friends__card">
+		<button class="our-friends__button-close button-close"><img src="assets/svg/x.svg"
+				alt="cross"></button>
 		<div class="our-friends__image">
 			<img src="${cards[random].img}" alt="${cards[random].name}">
 		</div>
-		<div class="our-friends__name">${cards[random].name}</div>
+		<div class="our-friends__info">
+			<h3 class="our-friends__name">${cards[random].name}</h3>
+			<h4 class="our-friends__subtitle">Dog - Labrador</h4>
+			<p class="our-friends__description">${cards[random].description}
+			</p>
+			<ul class="our-friends__list">
+				<li class="our-friends__li">
+					<h5>Age: </h5>${cards[random].age}
+				</li>
+				<li class="our-friends__li">
+					<h5>Inoculations: </h5>${cards[random].inoculations}
+				</li>
+				<li class="our-friends__li">
+					<h5>Diseases: </h5>${cards[random].diseases}
+				</li>
+				<li class="our-friends__li">
+					<H5>Parasites: </H5>${cards[random].parasites}
+				</li>
+			</ul>
+		</div>
 		<button class="our-friends__button-card button-card">Learn more</button>
-		</div>`
+	</div>`
 
 		cards[random].isRender = true
 
@@ -56,12 +77,33 @@ function getPrevCardBlock(array) {
 		const cardWrapper = document.createElement('div')
 		cardWrapper.classList.add('our-friends__card-wrapper')
 		cardWrapper.innerHTML = `<div class="our-friends__card">
+		<button class="our-friends__button-close button-close"><img src="assets/svg/x.svg"
+				alt="cross"></button>
 		<div class="our-friends__image">
 			<img src="${cards[random].img}" alt="${cards[random].name}">
 		</div>
-		<div class="our-friends__name">${cards[random].name}</div>
+		<div class="our-friends__info">
+			<h3 class="our-friends__name">${cards[random].name}</h3>
+			<h4 class="our-friends__subtitle">Dog - Labrador</h4>
+			<p class="our-friends__description">${cards[random].description}
+			</p>
+			<ul class="our-friends__list">
+				<li class="our-friends__li">
+					<h5>Age: </h5>${cards[random].age}
+				</li>
+				<li class="our-friends__li">
+					<h5>Inoculations: </h5>${cards[random].inoculations}
+				</li>
+				<li class="our-friends__li">
+					<h5>Diseases: </h5>${cards[random].diseases}
+				</li>
+				<li class="our-friends__li">
+					<H5>Parasites: </H5>${cards[random].parasites}
+				</li>
+			</ul>
+		</div>
 		<button class="our-friends__button-card button-card">Learn more</button>
-		</div>`
+	</div>`
 
 		cards[random].isRender = true
 
