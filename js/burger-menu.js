@@ -62,7 +62,7 @@ const helpLink = document.querySelector('#help')
 if (homeLink) {
 	homeLink.addEventListener('click', function (e) {
 		e.preventDefault()
-		setTimeout(function () { window.location.href = 'index.html' }, 250)
+		setTimeout(function () { window.location.href = 'index.html' }, 150)
 		document.body.classList.remove('_scroll-lock')
 		menuIcon.classList.remove('_active');
 		menuBody.classList.remove('_active');
@@ -77,7 +77,7 @@ if (homeLink) {
 if (ourPetsLink) {
 	ourPetsLink.addEventListener('click', function (e) {
 		e.preventDefault()
-		setTimeout(function () { window.location.href = 'pets.html' }, 250)
+		setTimeout(function () { window.location.href = 'pets.html' }, 150)
 		document.body.classList.remove('_scroll-lock')
 		menuIcon.classList.remove('_active');
 		menuBody.classList.remove('_active');
