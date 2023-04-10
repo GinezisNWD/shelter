@@ -822,7 +822,7 @@ h6 {
   line-height: 48px;
   text-align: center;
   color: #292929;
-  background: rgba(41, 41, 41, 0.2);
+  background: rgba(41, 41, 41, 0.01);
   border-radius: 100%;
   border: 3px solid #F1CDB3;
 }
@@ -1128,7 +1128,7 @@ h6 {
 .our-friends__card-wrapper._active .our-friends__li::before {
   content: "";
   position: absolute;
-  top: 40%;
+  top: 8.5px;
   left: -10px;
   width: 4px;
   height: 4px;
@@ -1262,6 +1262,64 @@ h6 {
   .our-friends__title {
     margin: 0 0 12px 0;
     font-size: 25px;
+  }
+}
+@media (max-width: 1239px) {
+  .our-friends__card-wrapper._active .our-friends__card {
+    width: 630px;
+    height: auto;
+  }
+  .our-friends__card-wrapper._active .our-friends__image {
+    width: 350px;
+    height: 350px;
+  }
+  .our-friends__card-wrapper._active .our-friends__info {
+    padding: 10px;
+  }
+  .our-friends__card-wrapper._active .our-friends__name {
+    margin: 0 0 10px 0;
+  }
+  .our-friends__card-wrapper._active .our-friends__subtitle {
+    margin: 0 0 20px 0;
+  }
+  .our-friends__card-wrapper._active .our-friends__description {
+    margin: 0 0 15px 0;
+    font-size: 13px;
+    line-height: 14.3px;
+  }
+  .our-friends__card-wrapper._active .our-friends__list {
+    margin: 0 0 0 16px;
+  }
+  .our-friends__card-wrapper._active .our-friends__li {
+    flex-wrap: wrap;
+    margin: 0;
+  }
+  .our-friends__card-wrapper._active .our-friends__li > h5 {
+    margin: 0;
+  }
+}
+@media (max-width: 748px) {
+  .our-friends__card-wrapper._active .our-friends__card {
+    max-width: 260px;
+    height: auto;
+  }
+  .our-friends__card-wrapper._active .our-friends__button-close {
+    right: -28px;
+  }
+  .our-friends__card-wrapper._active .our-friends__image {
+    display: none;
+  }
+  .our-friends__card-wrapper._active .our-friends__info {
+    padding: 10px;
+  }
+  .our-friends__card-wrapper._active .our-friends__name {
+    text-align: center;
+  }
+  .our-friends__card-wrapper._active .our-friends__subtitle {
+    text-align: center;
+  }
+  .our-friends__card-wrapper._active .our-friends__description {
+    max-width: 240px;
   }
 }
 
@@ -1519,10 +1577,120 @@ h6 {
   flex-wrap: wrap;
   align-items: start;
   justify-content: center;
+  min-height: 960px;
   overflow: hidden;
   margin: -30px;
   padding: 30px;
   gap: 28px 40px;
+}
+.our-pets__card-wrapper {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+.our-pets__card-wrapper_next-cards {
+  animation: next-cards 0.6s ease-in-out forwards;
+}
+.our-pets__card-wrapper_prev-cards {
+  animation: prev-cards 0.6s ease-in-out forwards;
+}
+.our-pets__card-wrapper._active {
+  position: fixed;
+  top: 0;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(41, 41, 41, 0.6);
+  transition: all 0.8s;
+}
+.our-pets__card-wrapper._active .our-pets__card {
+  position: relative;
+  flex: 0 1 auto;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 900px;
+  height: 500px;
+}
+.our-pets__card-wrapper._active .our-pets__card:hover {
+  cursor: pointer;
+  box-shadow: none;
+}
+.our-pets__card-wrapper._active .our-pets__card:hover .our-pets__button-card {
+  border: none;
+  background: none;
+  transition: none;
+}
+.our-pets__card-wrapper._active .our-pets__button-close {
+  display: block;
+  position: absolute;
+  top: -52px;
+  right: -44px;
+}
+.our-pets__card-wrapper._active .our-pets__image {
+  display: flex;
+  width: 500px;
+  height: 500px;
+  margin: 0;
+}
+.our-pets__card-wrapper._active .our-pets__info {
+  height: 100%;
+  justify-content: start;
+  padding: 50px 20px 90px 27px;
+  letter-spacing: 0.06em;
+}
+.our-pets__card-wrapper._active .our-pets__name {
+  margin: 0 0 10px 0;
+  text-align: start;
+  font-size: 35px;
+  line-height: 130%;
+}
+.our-pets__card-wrapper._active .our-pets__subtitle {
+  display: block;
+  margin: 0 0 42px 0;
+  font-size: 20px;
+  line-height: 115%;
+}
+.our-pets__card-wrapper._active .our-pets__description {
+  display: block;
+  line-height: 115%;
+  letter-spacing: 0.06em;
+  margin: 0 0 35px 0;
+}
+.our-pets__card-wrapper._active .our-pets__list {
+  display: block;
+  margin: 0 0 0 16px;
+}
+.our-pets__card-wrapper._active .our-pets__li {
+  display: flex;
+  position: relative;
+  align-items: center;
+  margin: 0 0 3px 0;
+  text-align: start;
+}
+.our-pets__card-wrapper._active .our-pets__li > h5 {
+  margin: 0 5px 0 0;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 110%;
+}
+.our-pets__card-wrapper._active .our-pets__li::before {
+  content: "";
+  position: absolute;
+  top: 8.5px;
+  left: -10px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: #F1CDB3;
+}
+.our-pets__card-wrapper._active .our-pets__button-card {
+  display: none;
 }
 .our-pets__card {
   flex: 0 1 22.5%;
@@ -1543,14 +1711,46 @@ h6 {
   background: #FDDCC4;
   transition: all 0.3s;
 }
+.our-pets__button-close {
+  display: none;
+}
 .our-pets__image {
   margin: 0 0 30px 0;
+  border-radius: 9px;
+  margin: 0 0 30px 0;
+}
+.our-pets__image > img {
+  border-radius: 9px;
 }
 .our-pets__name {
   font-size: 20px;
   color: #545454;
   letter-spacing: 0.06em;
   margin: 0 0 30px 0;
+}
+.our-pets__info {
+  display: flex;
+  flex-direction: column;
+  color: #000000;
+}
+.our-pets__name {
+  font-size: 20px;
+  color: #545454;
+  letter-spacing: 0.06em;
+  margin: 0 0 30px 0;
+  text-align: center;
+}
+.our-pets__subtitle {
+  display: none;
+}
+.our-pets__description {
+  display: none;
+}
+.our-pets__list {
+  display: none;
+}
+.our-pets__li {
+  display: none;
 }
 .our-pets__button-card {
   margin: 0 0 30px 0;
@@ -1561,7 +1761,7 @@ h6 {
   margin: 57px 0 0 0;
   gap: 20px;
 }
-@media (max-width: 1240px) {
+@media (max-width: 1239px) {
   .our-pets {
     padding: 200px 0 78px 0;
   }
@@ -1569,7 +1769,8 @@ h6 {
     margin: 0 0 30px 0;
   }
   .our-pets__pagination {
-    max-height: 1422px;
+    min-height: 1415px;
+    max-height: 1420px;
   }
   .our-pets__card {
     flex: 0 1 34.5%;
@@ -1578,7 +1779,7 @@ h6 {
     margin: 42px 0 0 0;
   }
 }
-@media (max-width: 440px) {
+@media (max-width: 748px) {
   .our-pets {
     padding: 162px 0 42px 0;
   }
@@ -1586,9 +1787,72 @@ h6 {
     margin: 0 0 40px 0;
     font-size: 25px;
   }
+  .our-pets__pagination {
+    display: flex;
+    flex-direction: column;
+    gap: 28px 0px;
+  }
   .our-pets__controls {
     margin: 44px 0 0 0;
     gap: 10px;
+  }
+}
+@media (max-width: 1239px) {
+  .our-pets__card-wrapper._active .our-pets__card {
+    width: 630px;
+    height: auto;
+  }
+  .our-pets__card-wrapper._active .our-pets__image {
+    width: 350px;
+    height: 350px;
+  }
+  .our-pets__card-wrapper._active .our-pets__info {
+    padding: 10px;
+  }
+  .our-pets__card-wrapper._active .our-pets__name {
+    margin: 0 0 10px 0;
+  }
+  .our-pets__card-wrapper._active .our-pets__subtitle {
+    margin: 0 0 20px 0;
+  }
+  .our-pets__card-wrapper._active .our-pets__description {
+    margin: 0 0 15px 0;
+    font-size: 13px;
+    line-height: 14.3px;
+  }
+  .our-pets__card-wrapper._active .our-pets__list {
+    margin: 0 0 0 16px;
+  }
+  .our-pets__card-wrapper._active .our-pets__li {
+    flex-wrap: wrap;
+    margin: 0;
+  }
+  .our-pets__card-wrapper._active .our-pets__li > h5 {
+    margin: 0;
+  }
+}
+@media (max-width: 748px) {
+  .our-pets__card-wrapper._active .our-pets__card {
+    max-width: 260px;
+    height: auto;
+  }
+  .our-pets__card-wrapper._active .our-pets__button-close {
+    right: -28px;
+  }
+  .our-pets__card-wrapper._active .our-pets__image {
+    display: none;
+  }
+  .our-pets__card-wrapper._active .our-pets__info {
+    padding: 10px;
+  }
+  .our-pets__card-wrapper._active .our-pets__name {
+    text-align: center;
+  }
+  .our-pets__card-wrapper._active .our-pets__subtitle {
+    text-align: center;
+  }
+  .our-pets__card-wrapper._active .our-pets__description {
+    max-width: 240px;
   }
 }
 
@@ -1610,7 +1874,7 @@ body {
   max-width: 1200px;
   margin: 0px auto;
 }
-@media (max-width: 1240px) {
+@media (max-width: 1239px) {
   .container {
     max-width: 708px;
   }
