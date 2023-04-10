@@ -39,7 +39,7 @@ function getCardsBlock(n) {
 		</div>
 		<div class="our-friends__info">
 			<h3 class="our-friends__name">${cards[random].name}</h3>
-			<h4 class="our-friends__subtitle">Dog - Labrador</h4>
+			<h4 class="our-friends__subtitle">${cards[random].type}: ${cards[random].breed}</h4>
 			<p class="our-friends__description">${cards[random].description}
 			</p>
 			<ul class="our-friends__list">
@@ -84,7 +84,7 @@ function getPrevCardBlock(array) {
 		</div>
 		<div class="our-friends__info">
 			<h3 class="our-friends__name">${cards[random].name}</h3>
-			<h4 class="our-friends__subtitle">Dog - Labrador</h4>
+			<h4 class="our-friends__subtitle">${cards[random].type}: ${cards[random].breed}</h4>
 			<p class="our-friends__description">${cards[random].description}
 			</p>
 			<ul class="our-friends__list">
