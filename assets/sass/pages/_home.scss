@@ -543,7 +543,6 @@
 		}
 	}
 
-	// for pop-up
 	@media (max-width: 1239px) {
 		&__card-wrapper._active .our-friends__card {
 			width: 630px;
@@ -570,7 +569,7 @@
 		&__card-wrapper._active .our-friends__description {
 			margin: 0 0 15px 0;
 			font-size: 13px;
-			line-height: 14.3px;
+			line-height: 14.2px;
 		}
 
 		&__card-wrapper._active .our-friends__list {

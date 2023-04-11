@@ -60,8 +60,6 @@ function getCardsBlock(n) {
 	for (let i = 0; i < n; i++) {
 		const random = i
 
-
-
 		const cardWrapper = document.createElement('div')
 		cardWrapper.classList.add('our-pets__card-wrapper')
 		cardWrapper.innerHTML = `<div class="our-pets__card">
@@ -144,7 +142,3 @@ function resize() {
 
 // console.log(cards)
 // console.log(sortedСards)
-
-
-
-// console.log(document.head.nextSibling)
