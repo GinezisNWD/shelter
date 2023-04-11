@@ -1,0 +1,397 @@
+.main {}
+
+.our-pets {
+	padding: 200px 0 100px 0;
+	background-color: $color-light-l;
+
+	&__wrapper {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__title {
+		margin: 0 0 60px 0;
+
+		font-size: 35px;
+		line-height: 130%;
+		color: $color-dark-l;
+		letter-spacing: 0.06em;
+		text-align: center;
+
+	}
+
+	&__pagination {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: start;
+		justify-content: center;
+
+
+		min-height: 960px;
+
+		overflow: hidden;
+		margin: -30px;
+		padding: 30px;
+		gap: 28px 40px;
+	}
+
+	&__card-wrapper {
+		position: relative;
+		top: 0;
+		left: 0;
+
+		&_next-cards {
+			animation: next-cards 0.6s ease-in-out forwards;
+		}
+
+		&_prev-cards {
+			animation: prev-cards 0.6s ease-in-out forwards;
+		}
+	}
+
+	&__card-wrapper._active {
+		position: fixed;
+		top: 0;
+		left: 0%;
+		width: 100%;
+		height: 100%;
+		z-index: 999;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		background: rgba(41, 41, 41, 0.6);
+		transition: all 0.8s;
+	}
+
+	&__card-wrapper._active .our-pets__card {
+		position: relative;
+		flex: 0 1 auto;
+		flex-direction: row;
+		justify-content: space-between;
+		width: 900px;
+		height: 500px;
+
+		&:hover {
+			cursor: pointer;
+			box-shadow: none
+		}
+
+		&:hover .our-pets__button-card {
+			border: none;
+			background: none;
+			transition: none;
+		}
+	}
+
+	&__card-wrapper._active .our-pets__button-close {
+		display: block;
+		position: absolute;
+		top: -52px;
+		right: -44px;
+
+	}
+
+	&__card-wrapper._active .our-pets__image {
+		display: flex;
+		width: 500px;
+		height: 500px;
+		margin: 0;
+	}
+
+	&__card-wrapper._active .our-pets__info {
+		height: 100%;
+		justify-content: start;
+		padding: 50px 20px 90px 27px;
+
+		letter-spacing: 0.06em;
+	}
+
+
+	&__card-wrapper._active .our-pets__name {
+		margin: 0 0 10px 0;
+
+
+		text-align: start;
+		font-size: 35px;
+		line-height: 130%;
+	}
+
+	&__card-wrapper._active .our-pets__subtitle {
+		display: block;
+		margin: 0 0 42px 0;
+
+
+		font-size: 20px;
+		line-height: 115%;
+	}
+
+	&__card-wrapper._active .our-pets__description {
+		display: block;
+		line-height: 115%;
+		letter-spacing: 0.06em;
+		margin: 0 0 35px 0;
+	}
+
+	&__card-wrapper._active .our-pets__list {
+		display: block;
+		margin: 0 0 0 16px;
+	}
+
+	&__card-wrapper._active .our-pets__li {
+		display: flex;
+		position: relative;
+		align-items: center;
+		margin: 0 0 3px 0;
+		text-align: start;
+
+
+		&>h5 {
+			margin: 0 5px 0 0;
+			font-family: Georgia, 'Times New Roman', Times, serif;
+			font-style: normal;
+			font-weight: 700;
+			font-size: 15px;
+			line-height: 110%;
+		}
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 8.5px;
+			left: -10px;
+			width: 4px;
+			height: 4px;
+			border-radius: 50%;
+			background-color: $color-primary;
+
+		}
+	}
+
+	&__card-wrapper._active .our-pets__button-card {
+		display: none;
+	}
+
+	&__card {
+		flex: 0 1 22.5%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+
+		background-color: $color-light-s;
+		border-radius: 9px;
+
+		&:hover {
+			cursor: pointer;
+			box-shadow: 0px 0px 15px 15px $color-dark-s;
+			transition: all 0.3s
+		}
+
+		&:hover .our-pets__button-card {
+			border: 2px solid $color-primary-light;
+			background: $color-primary-light;
+			transition: all 0.3s
+		}
+	}
+
+	&__button-close {
+		display: none;
+	}
+
+	&__image {
+		margin: 0 0 30px 0;
+		border-radius: 9px;
+		margin: 0 0 30px 0;
+
+		&>img {
+			border-radius: 9px;
+		}
+	}
+
+	&__name {
+		font-size: 20px;
+		color: $color-dark-l;
+		letter-spacing: 0.06em;
+		margin: 0 0 30px 0;
+	}
+
+	&__info {
+		display: flex;
+		flex-direction: column;
+
+		color: #000000;
+	}
+
+	&__name {
+		font-size: 20px;
+		color: $color-dark-l;
+		letter-spacing: 0.06em;
+		margin: 0 0 30px 0;
+		text-align: center;
+	}
+
+	&__subtitle {
+		display: none;
+	}
+
+	&__description {
+		display: none;
+	}
+
+	&__list {
+		display: none;
+	}
+
+	&__li {
+		display: none;
+	}
+
+	&__button-card {
+		margin: 0 0 30px 0;
+	}
+
+	&__controls {
+		display: flex;
+		justify-content: center;
+		margin: 57px 0 0 0;
+		gap: 20px;
+	}
+
+	&__button-arrow-prev {}
+
+	&__button-arrow-some {}
+
+	@media (max-width: 1239px) {
+		padding: 200px 0 78px 0;
+
+		&__title {
+			margin: 0 0 30px 0;
+		}
+
+		&__pagination {
+			min-height: 1415px;
+			max-height: 1428px;
+		}
+
+		&__card {
+			flex: 0 1 34.5%;
+		}
+
+		&__controls {
+			margin: 42px 0 0 0;
+		}
+
+	}
+
+	@media (max-width: 748px) {
+		padding: 162px 0 42px 0;
+
+		&__title {
+			margin: 0 0 40px 0;
+			font-size: 25px;
+		}
+
+		&__pagination {
+			display: flex;
+			flex-direction: column;
+
+			gap: 28px 0px;
+		}
+
+
+
+		&__controls {
+			margin: 44px 0 0 0;
+			gap: 10px;
+		}
+	}
+
+	@media (max-width: 1239px) {
+		&__card-wrapper._active .our-pets__card {
+			width: 630px;
+			height: auto;
+		}
+
+		&__card-wrapper._active .our-pets__image {
+			width: 350px;
+			height: 350px;
+		}
+
+		&__card-wrapper._active .our-pets__info {
+			padding: 10px;
+		}
+
+		&__card-wrapper._active .our-pets__name {
+			margin: 0 0 10px 0;
+		}
+
+		&__card-wrapper._active .our-pets__subtitle {
+			margin: 0 0 20px 0;
+		}
+
+		&__card-wrapper._active .our-pets__description {
+			margin: 0 0 15px 0;
+			font-size: 13px;
+			line-height: 14.2px;
+		}
+
+		&__card-wrapper._active .our-pets__list {
+			margin: 0 0 0 16px;
+		}
+
+		&__card-wrapper._active .our-pets__li {
+			flex-wrap: wrap;
+			margin: 0;
+
+			&>h5 {
+				margin: 0;
+			}
+		}
+	}
+
+	@media (max-width: 748px) {
+		&__card-wrapper._active .our-pets__card {
+			max-width: 260px;
+			height: auto;
+		}
+
+		&__card-wrapper._active .our-pets__button-close {
+			right: -28px;
+
+		}
+
+		&__card-wrapper._active .our-pets__image {
+			display: none;
+		}
+
+		&__card-wrapper._active .our-pets__info {
+			padding: 10px;
+		}
+
+
+		&__card-wrapper._active .our-pets__name {
+			text-align: center;
+		}
+
+		&__card-wrapper._active .our-pets__subtitle {
+			text-align: center;
+		}
+
+		&__card-wrapper._active .our-pets__description {
+			max-width: 240px;
+		}
+
+	}
+
+
+}
+
+
+
+.button-card {}
+
+.button-arrow {}
